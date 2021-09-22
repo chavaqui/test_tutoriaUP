@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis tutorandos</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <!-- FONT AWESO-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--FONT OSWALD-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!-- CUSTOM CSS-->
+    <link rel="stylesheet" href="tutorandos_styles.css">
+    
+    <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.0/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <main class="container">
+        <h1>Mis tutorandos</h1>
+        <div class="row">
+            <div class="col-md-6 p-2">
+                <form id="formBuscar" class="card card-body">
+                    <p>Buscar por codigo</p>
+                    <div class="form-group p-1">
+                        <input 
+                            type="text"
+                            id="codigoBuscar"
+                            placeholder="Codigo"
+                            class="form-control"
+                            >
+                    </div>
+                    <button id="btn-buscar" class="btn_buscar" type="submit">
+                        Buscar
+                    </button>
+                    <ul id="alumno-buscado"></ul>                    
+                </form>
+            </div>
+            <div class="card-body">
+                <h5 class="titulo"> LISTADO DE ALUMNOS</h5>
+                <table class="table">
+                    <div id="tabla-alumnos"></div>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../../database/tutorando.js"></script>
+</body>
+</html>
